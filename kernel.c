@@ -1,4 +1,5 @@
 #include "kernel.h"
+#include "common.h"
 
 typedef unsigned char uint8_t;
 typedef unsigned int uint32_t;
@@ -68,10 +69,13 @@ void kernel_main(void){
     //reset the stack manually from the top down
     memset(__bss, 0, (size_t) __bss_end - (size_t) __bss);
 
-    const char *s = "Hey there, welcome to Momo OS!\n";
-    for(int i=0; s[i]!= '\0'; i++){
-        putchar(s[i]);
-    }
+    // const char *s = "Hey there, welcome to Momo OS!\n";
+    // for(int i=0; s[i]!= '\0'; i++){
+    //     putchar(s[i]);
+    // }
+
+    const char *message = "Hey there, welcome to Momo OS!\n %s";
+    printf(message,"hey!");
 
     //busy wait
     for(;;){
