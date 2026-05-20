@@ -74,8 +74,8 @@ void kernel_main(void){
     //     putchar(s[i]);
     // }
 
-    const char *message = "Hey there, welcome to Momo OS!\n %s";
-    printf(message,"hey!");
+    const char *message = "Hey there, welcome to Momo OS!\ns: %s\nd:%d\n";
+    printf(message,"hey!",8967);
 
     //busy wait
     for(;;){

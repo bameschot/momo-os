@@ -8,3 +8,5 @@
 !opensbi-riscv32-generic-fw_dynamic.bin
 *.log
 *.pcap
+*.dSYM
+.vscode
